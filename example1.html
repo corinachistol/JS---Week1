@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Average temps for the day</title>
+</head>
+<body>
+  
+
+
+<!-- html -->
+  <script>
+    // JS Syntax
+    // has the temps for the day and night 
+    // calculates avg for that day
+    // show the informations using various options: alert,console,document
+
+    let tempNight = 15.0
+    let tempDay   = 35.0
+
+    let tempAvg   = (tempNight + tempDay) / 2
+
+
+
+    /*
+      night:15.0℃
+      day: 35.0℃
+      avg: 25.0℃  
+
+    */
+
+    let output = "night: " + tempNight + "℃" + "\n" +
+                 "day:   " + tempDay   + "℃" + "\n" +
+                 "avg:   " + tempAvg   + "℃"
+
+    // alert message box
+
+    alert(output)
+
+    // console
+    console.log(output)
+
+    // document
+    document.write(
+      output.replace("\n", "<br>")
+            .replace("\n", "<br>")
+            .replace(" ","&nbsp;")
+            .replace(" ","&nbsp;")
+            .replace(" ","&nbsp;")
+            .replace(" ","&nbsp;")
+            .replace(" ","&nbsp;")
+            .replace(" ","&nbsp;")
+            )
+
+    
+
+
+  </script>
+</body>
+<!-- html -->
+</html>
