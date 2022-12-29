@@ -1,0 +1,185 @@
+<!-- 
+  JS:
+  
+  ATM
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ATM | JS</title>
+<style>
+
+  button {
+    display: block;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    background-color: #345;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 5px #345;
+    
+  }
+
+  button:hover{
+    background-color: white;
+    color: #345;
+    transition:.3s;
+  }
+
+
+</style>
+</head>
+<body>
+
+<!-- 
+  1. create button
+  2. process script element(execute Js)
+  3. ? execute Js binded to theclick
+
+ -->
+  <button onclick="alert('BUTTON CLICKED' + n)">CLICK TO EXECUTE JS</button>
+
+  <script>
+    //this code will RUN on each window log
+
+    alert("PAGE LOADED")
+    let n = 1
+    
+  </script>
+
+  <h1>JS ATM & Co.</h1>
+  <h2>Welcome </h2>
+  <p>Choose action</p>
+  <button onclick="
+    //diagrams
+    // + ....> parseint()
+    let input_id  = +prompt('Enter ID')
+
+    if ( input_id === client_id ) {
+
+      let input_pin = +prompt('Enter PIN')
+
+      if ( input_pin === client_pin_code ) {
+          alert(`balance: ${client_money_amount} ${client_money_currency}`)
+      } else { 
+          alert('Wrong Pin code')
+
+      }
+    } else{
+        alert('Wrong client ID')
+    }
+    
+  ">CHECK FUNDS</button> 
+
+  <button onclick ="
+    //HW1:add id & pin verification here
+    let input_id  = +prompt('Enter ID') 
+    if ( input_id === client_id ) {
+
+      let input_pin = +prompt('Enter PIN') 
+
+      if ( input_pin === client_pin_code ) {
+          
+          
+          let input_amount = +prompt('Enter Amount')
+          let input_currency = prompt ('Enter currency')
+          if( input_currency === client_money_currency ) {
+            client_money_amount += input_amount
+              //ADD A SUCCESS MESSAGE HERE
+              alert('Successfull Operation')
+          } else {
+              alert(`Cannot process ${input_currency}`)
+            }
+
+      } else{
+          alert('Wrong PIN CODE')
+      }
+    } else{
+        alert('Wrong Client ID')
+
+    }
+    //HW2:make all the buttons of the same size
+    
+
+    //10000 +'5000'= JS le alipeste 
+
+  ">
+    TRANSFER FUNDS
+  </button>
+
+
+ 
+  
+  <button onclick="
+  //write the withdrawal logic
+  //   check id & pin
+  //   check if sufficient FUNDS
+  //   check if the same currency
+  //   check limit 5000
+  //   update the funds 
+  //   display success message
+  
+
+   let input_id = +prompt('Enter ID')
+   if ( input_id === client_id) {
+
+    let input_pin = +prompt('Enter PIN')
+    if (input_pin === client_pin_code ) {
+
+      let input_withdrawal_amount = +prompt('Enter Amount')
+      if ( input_withdrawal_amount <= client_money_amount) {
+
+        let input_withdrawal_currency = prompt('Enter Currency')
+        if ( input_withdrawal_currency === client_money_currency) {
+
+          if( input_withdrawal_amount >= 5000 ) {
+            alert('Maximum withdrawal amount exceeded per day:5000!')
+
+          } else{
+            // client_money_amount = client_money_amount  - input_withdrawal_amount
+            client_money_amount -= input_withdrawal_amount
+            alert(`balance: ${client_money_amount} ${client_money_currency}`)
+            alert('Successfull Operation!')
+          }
+
+        } else {
+          alert(`Cannot process ${input_withdrawal_currency}`)
+
+        }
+
+
+      } else{
+        alert('Insufficient Amount!')
+
+      }
+
+    } else{
+       alert('Wrong Pin Code!!!')
+
+    }
+
+   } else{
+      alert('Wrong Client ID')
+
+   }
+
+
+  ">
+    WITHDRAW FUNDS
+  </button>
+
+  <script>
+    //Client account data
+    let client_money_amount   = 10000
+    let client_money_currency = "EUR"
+    let client_id             = 12345678
+    let client_pin_code       = 1234
+  </script>
+
+</body>
+</html>
