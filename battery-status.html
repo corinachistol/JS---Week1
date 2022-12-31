@@ -1,0 +1,30 @@
+<script>
+  batteryCharge = 70             //% <----variable   70=literals,numar explicite
+
+FULL_BATTERY = 100            //100% - fully charged battery
+chargePercentInMinutes = 10  //1% - 10minutes
+
+chargePercentInHours = chargePercentInMinutes / 60 //minutes
+
+alert( "Remaining time in hours:" + chargePercentInHours)
+
+etWorkInMinutes        = batteryCharge * chargePercentInMinutes   //valoare implicita, dupa calcul devine valoare explicita
+
+etWorkInHours          = batteryCharge * chargePercentInHours
+
+alert( "Remaining time in hours2:" + etWorkInHours ) 
+
+//display functions:
+alert( "Remaining time:" + etWorkInMinutes + "minutes")
+
+// "remaining time " - string
+
+//HM1: calculate it in hours
+
+chargePercentInHours2  = 0.5  //1% = 30min
+
+etWorkInHours2         = batteryCharge  * chargePercentInHours2
+alert( "Remaining time2:"+ etWorkInHours2 + "hours")
+
+
+</script>
