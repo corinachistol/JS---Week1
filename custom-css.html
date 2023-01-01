@@ -1,0 +1,30 @@
+<script>
+  // display a square with color + size from prompt()
+  color        = prompt("Enter color name or code")
+  size         = prompt("Enter size in pixels")
+  borderWidth  = prompt("Enter border width in pixels")
+  borderColor  = prompt("Enter border color")
+
+  //  !!!String
+  // "..."
+  // '...' 
+  // `...`
+
+  document.write(
+    //template
+    `<div style="
+        background: ${color}; 
+        width:  ${size}px; 
+        height: ${size}px;
+        border-width: ${borderWidth}px;
+        border-color: ${borderColor};"
+      >
+
+    </div>`
+  )
+
+  //HW3
+  // user-> prompt()  border width, color
+
+</script>
+
