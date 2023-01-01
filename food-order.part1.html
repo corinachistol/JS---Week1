@@ -1,0 +1,27 @@
+<script>
+  // IN: our app asls the suer for the desired quatity
+  // FACT: we know the price for each item
+  // OUT: total cost
+
+    //data
+    foodName               = "Salad"   //String
+    foodPriceValue         = 15.00     //Number
+    foodPriceUnits         = "MDL"     //String
+    foodPriceDelivery      = 30.00
+    foodPriceDeliveryUnits = "MDL"
+
+     clientQuantity    = prompt(
+      "Menu\n\n" + foodName + "." + " \n\nHow Many?"
+    )
+
+    totalCost  = (foodPriceValue * clientQuantity) + foodPriceDelivery
+
+    alert(
+      "You've ordered: " + clientQuantity +
+      "\n\nDelivery: " + foodPriceDelivery + foodPriceDeliveryUnits + 
+      " \n\nBill: " + totalCost + foodPriceUnits
+  
+    )
+    
+</script>
+ 
