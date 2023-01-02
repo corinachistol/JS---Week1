@@ -3,6 +3,7 @@
   color        = prompt("Enter color name or code")
   size         = prompt("Enter size in pixels")
   borderWidth  = prompt("Enter border width in pixels")
+  borderStyle  = prompt("Enter border style")
   borderColor  = prompt("Enter border color")
 
   //  !!!String
@@ -16,7 +17,8 @@
         background: ${color}; 
         width:  ${size}px; 
         height: ${size}px;
-        border-width: ${borderWidth}px;
+        border-width: ${borderWidth};
+        border-style: ${borderStyle};
         border-color: ${borderColor};"
       >
 
